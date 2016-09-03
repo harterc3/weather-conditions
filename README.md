@@ -1,20 +1,7 @@
 # Conditions
 
-**TODO: Add description**
+**Exercise from Programming Elixir 1.2 by Dave Thomas**
 
-## Installation
+No command line arguments. Pulls xml from configured URL and prints out on command line.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add conditions to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:conditions, "~> 0.0.1"}]
-        end
-
-  2. Ensure conditions is started before your application:
-
-        def application do
-          [applications: [:conditions]]
-        end
-
+To run: `./conditions`
