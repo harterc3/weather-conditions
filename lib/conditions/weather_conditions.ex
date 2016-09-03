@@ -5,6 +5,9 @@ defmodule Conditions.WeatherConditions do
   Record.defrecord :xmlText,    Record.extract(:xmlText,    from_lib: "xmerl/include/xmerl.hrl")
 
   @weather_url Application.get_env(:conditions, :weather_url)
+  @doc """
+  Use configured url to fetch weather data and convert to tuple-style xml
+  """
   def fetch do
     @weather_url
     |> HTTPoison.get

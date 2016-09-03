@@ -4,10 +4,13 @@ defmodule Conditions.Mixfile do
   def project do
     [app: :conditions,
      version: "0.0.1",
+     name: "Weather Conditions",
+     source_url: "https://github.com/harterc3/weather-conditions",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps]
+     deps: deps,
+     escript: escript_config]
   end
 
   # Configuration for the OTP application
@@ -28,7 +31,13 @@ defmodule Conditions.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      httpoison: "~> 0.9"
+      httpoison: "~> 0.9",
+      ex_doc: "~> 0.11",
+      earmark: ">= 0.0.0"
     ]
+  end
+
+  defp escript_config do
+    [ main_module: Conditions.CLI ]
   end
 end

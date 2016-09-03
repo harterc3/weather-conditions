@@ -48,13 +48,11 @@ defmodule XmlDeserializerTest do
     assert result == [current_observation: [fake: [_text: 'Yeah I made this one up.']]]
   end
 
-  test "xml can be serialized" do
+  test "multi level xml can be serialized" do
     result = XD.go(simple_test_data)
     assert result == [current_observation: 
       [ credit: [_text: 'NOAA\'s National Weather Service'], 
         credit_URL: [_text: 'http://weather.gov/'], 
         fake: [_text: 'Yeah I made this one up.'] ] ]
   end
-
-  
 end
